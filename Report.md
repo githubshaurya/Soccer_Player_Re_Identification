@@ -1,5 +1,7 @@
 ### Player Tracking Report
 
+Note: This submission is self-contained and documented for reproducibility. No external debugging is expected, but you must update the file paths (`VIDEO_PATH`, `MODEL_PATH`, and `OUTPUT_PATH`) in the code (`player_identify.py`) to match your local environment before running.
+
 This report walks through how I built and tested a system to track and re‑identify players in a sports video, what worked (and what didn't), the hurdles I hit, and how I would move forward with more time or resources.
 
 1. What I Did
