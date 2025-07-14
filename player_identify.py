@@ -10,7 +10,7 @@ from filterpy.kalman import KalmanFilter
 
 VIDEO_PATH  = r"C:\Users\shaur\Downloads\15sec_input_720p.mp4"
 MODEL_PATH  = r"C:\Users\shaur\Downloads\best.pt"
-OUTPUT_PATH = r"C:\Users\shaur\Downloads\output_cluster_robust.mp4"
+OUTPUT_PATH = r"C:\Users\shaur\Downloads\players_identified.mp4"
 
 # —————————————— CONFIG ——————————————
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -28,7 +28,7 @@ W_DIST = 0.2
 print("Using device:", DEVICE)
 
 # —————————————— YOLO  ——————————————
-yolo = YOLO(MODEL_PATH).to(DEVICE)
+yolo = YOLO(MODEL_PATH, model='yolov11').to(DEVICE)
 yolo.conf = CONF_THRESH
 player_cls = next(i for i,n in yolo.names.items() if n.lower()=="player")
 
